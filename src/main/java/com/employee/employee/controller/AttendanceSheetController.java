@@ -26,4 +26,13 @@ public class AttendanceSheetController {
         attendanceSheetService.addAttendanceSheet(attendanceSheet);
         return attendanceSheet.toString();
     }
+    @DeleteMapping("/delete")
+    public String deleteAttendanceSheet(@RequestParam int id) {
+        attendanceSheetService.deleteAttendanceSheetById(id);
+        return "Deleted AttendanceSheet with id: " + id;
+    }
+    @GetMapping("/getByMaNVAndDate")
+    public List<AttendanceSheet> getByMaNVAndDate(@RequestParam String maNV, @RequestParam String date) {
+        return attendanceSheetService.getAttendanceByMaNVAndDate(maNV, date);
+    }
 }
