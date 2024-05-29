@@ -14,6 +14,11 @@ public class EmloyeeController {
     @Autowired
     private EmployeeService employeeService;
 
+    @GetMapping("/getByMaNV/{maNV}")
+     public List<Employee> getEmployeeByMaNV(@PathVariable String maNV) {
+        return employeeService.getByMaNV(maNV);
+    }
+
     @GetMapping("/getAll")
     public List<Employee> getAllItem() {
         return employeeService.getAllEmployee();

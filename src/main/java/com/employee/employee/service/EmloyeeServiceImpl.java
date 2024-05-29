@@ -22,4 +22,9 @@ public class EmloyeeServiceImpl implements  EmployeeService{
     public List<Employee> getAllEmployee() {
         return employeeRepostory.findAll();
     }
+
+    @Override
+    public List<Employee> getByMaNV(String maNV) {
+        return employeeRepostory.findByMaNV(maNV);
+    }
 }

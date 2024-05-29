@@ -7,4 +7,4 @@ import java.util.List;
 public interface EmployeeService {
     public Employee addEmployee(Employee employee) ;
     public List<Employee> getAllEmployee();
-}
+    List<Employee> getByMaNV(String maNV);}
