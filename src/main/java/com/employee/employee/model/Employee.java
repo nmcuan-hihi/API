@@ -14,6 +14,7 @@ public class Employee {
     private String diaChi;
     private String tenChucVu;
     private double mucLuong;
+    private String imageUrl;
 
     public Employee() {
     }
@@ -29,6 +30,7 @@ public class Employee {
                 ", diaChi='" + diaChi + '\'' +
                 ", tenChucVu='" + tenChucVu + '\'' +
                 ", mucLuong=" + mucLuong +
+                ", imageUrl='" + imageUrl + '\'' +
                 '}';
     }
 
@@ -96,7 +98,15 @@ public class Employee {
         this.mucLuong = mucLuong;
     }
 
-    public Employee(String maNV, String pass, String tenNV, String soDT, String quyen, String diaChi, String tenChucVu, double mucLuong) {
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public Employee(String maNV, String pass, String tenNV, String soDT, String quyen, String diaChi, String tenChucVu, double mucLuong, String imageUrl) {
         this.maNV = maNV;
         this.pass = pass;
         this.tenNV = tenNV;
@@ -105,5 +115,6 @@ public class Employee {
         this.diaChi = diaChi;
         this.tenChucVu = tenChucVu;
         this.mucLuong = mucLuong;
+        this.imageUrl = imageUrl;
     }
 }
