@@ -41,6 +41,7 @@ public class EmloyeeServiceImpl implements  EmployeeService{
             employee.setDiaChi(employeeDetails.getDiaChi());
             employee.setTenChucVu(employeeDetails.getTenChucVu());
             employee.setMucLuong(employeeDetails.getMucLuong());
+            employee.setImageUrl(employeeDetails.getImageUrl());
             return employeeRepostory.save(employee);
         } else {
             throw new RuntimeException("Employee not found with id " + id);
